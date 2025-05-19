@@ -20,9 +20,8 @@ jobs:
           java-version: '17'
           
       - name: Build with Maven
-      working-directory: DevOpsSummative2
-      run: mvn clean package
-
+        working-directory: DevOpsSummative2
+        run: mvn clean package
 
       - name: Upload JAR to EC2
         uses: appleboy/scp-action@v0.1.4
@@ -30,7 +29,7 @@ jobs:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.BP02388913_SECRET_ACCESS_KEY_ID }}
-          source: "target/*.jar"
+          source: "DevOpsSummative2/target/*.jar"
           target: "/home/ubuntu/"
 
       - name: Run JAR on EC2
