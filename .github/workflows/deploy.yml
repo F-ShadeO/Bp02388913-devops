@@ -18,9 +18,11 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
-
+          
       - name: Build with Maven
-        run: mvn clean package
+      working-directory: DevOpsSummative2
+      run: mvn clean package
+
 
       - name: Upload JAR to EC2
         uses: appleboy/scp-action@v0.1.4
