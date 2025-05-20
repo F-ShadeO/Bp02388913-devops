@@ -25,6 +25,8 @@ public class NameController {
     public String submitAnimal(@RequestParam("textInput") String textInput, Model model) {
         model.addAttribute("textInput", textInput);
         this.nameManager.addAnimal(textInput);
+        model.addAttribute("name", nameManager.createName());
+        
         return "index";
     }
 
@@ -32,6 +34,8 @@ public class NameController {
     public String submitAdjective(@RequestParam("textInput") String textInput, Model model) {
         model.addAttribute("textInput", textInput);
         this.nameManager.addAdjective(textInput);
+        model.addAttribute("name", nameManager.createName());
+        
         return "index";
     }
 
