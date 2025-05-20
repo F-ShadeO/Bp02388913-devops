@@ -12,36 +12,24 @@ public class NameController {
 
     @GetMapping("/")
     public String index(Model model) {
-        return newName(model);
-    }
-
-    @GetMapping("/api/name")
-    public String newName(Model model) {
         model.addAttribute("name", nameManager.createName());
         return "index";
     }
 
     @PostMapping("/api/submit/animal")
-    public String submitAnimal(@RequestParam("textInput") String textInput, Model model) {
-        model.addAttribute("textInput", textInput);
+    public String submitAnimal(@RequestParam("textInput") String textInput) {
         this.nameManager.addAnimal(textInput);
-        model.addAttribute("name", nameManager.createName());
-        
-        return "index";
+        return "redirect:/";
     }
 
     @PostMapping("/api/submit/adjective")
-    public String submitAdjective(@RequestParam("textInput") String textInput, Model model) {
-        model.addAttribute("textInput", textInput);
+    public String submitAdjective(@RequestParam("textInput") String textInput) {
         this.nameManager.addAdjective(textInput);
-        model.addAttribute("name", nameManager.createName());
-        
-        return "index";
+        return "redirect:/";
     }
 
     @Autowired
     public void setNameManager(NameManager nameManager) {
         this.nameManager = nameManager;
     }
-
 }
