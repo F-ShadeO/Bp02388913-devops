@@ -17,9 +17,24 @@ public class NameManager {
 
         adjectives = new ArrayList<>();
         adjectives.add("Secret");
+        adjectives.add("Mighty");
+        adjectives.add("Brave");
+        adjectives.add("Swift");
+        adjectives.add("Fierce");
+        adjectives.add("Gentle");
+        adjectives.add("Clever");
+        adjectives.add("Bold");
 
         animals = new ArrayList<>();
         animals.add("Squirrel");
+        animals.add("Tiger");
+        animals.add("Eagle");
+        animals.add("Wolf");
+        animals.add("Fox");
+        animals.add("Bear");
+        animals.add("Panther");
+        animals.add("Otter");
+
 
     }
 
