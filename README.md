@@ -1,4 +1,4 @@
-# Random Name Generator – DevOps Deployment Project
+# Random Name Generator – DevOps Project
 This project demonstrates a DevOps CI/CD pipeline to deploy a Java-based Spring Boot application that generates random names using combinations of adjectives and animals.
 
 ## 🔍 Project Overview
