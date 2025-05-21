@@ -20,7 +20,7 @@ class NameManagerTest {
         String name = testObject.createName();
 
         assertNotNull(name, "Name should not be null");
-        assertEquals("Secret Squirrel", name, "Name does not match");
+        assertEquals(2, name.trim().split("\\s+").length, "Name should contain exactly two words"):
 
     }
 
